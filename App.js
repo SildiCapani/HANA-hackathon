@@ -17,7 +17,7 @@ export default function App() {
             headerStyle: { backgroundColor: COLORS.lightWhite },
             headerShadowVisible: false,
             headerLeft: () => (
-              <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
+              <ScreenHeaderBtn iconUrl={icons.menu} dimension="55%" />
             ),
             headerRight: () => (
               <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" disabled={true} />

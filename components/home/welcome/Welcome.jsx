@@ -14,7 +14,7 @@ import { icons, SIZES } from '../../../constants'
 const Welcome = () => {
   return (
     <View>
-      <Text>Welcome</Text>
+      <Text style={styles.welcomeMessage}>Welcome</Text>
     </View>
   )
 }

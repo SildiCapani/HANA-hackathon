@@ -1,18 +1,66 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {Home} from './app/index.js'
+import { Home } from './app/index.js';
+import { useFonts } from 'expo-font';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 
 import { COLORS, icons, images, SIZES } from './constants'
-import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from './components'
+import { LinksList, ScreenHeaderBtn, Welcome} from './components'
 
 
-const Stack = createNativeStackNavigator();
+const Stack = createBottomTabNavigator();
+
+export const unstable_settings = {
+  initialRouteName: "home",
+}
 
 export default function App() {
+
+  const [fontsLoaded] = useFonts({
+    DMBold: require("./assets/fonts/DMSans-Bold.ttf"),
+    DMMedium: require("./assets/fonts/DMSans-Medium.ttf"),
+    DMRegular: require("./assets/fonts/DMSans-Regular.ttf"),
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
+  const homeName = "Home";
+  const detailsName = "Popular";
+  const settingsName = "Settings";
+
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} 
+      <Stack.Navigator
+      initialRouteName={homeName}
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size }) => {
+          let iconName;
+          let rn = route.name;
+
+          if (rn === homeName) {
+            iconName = focused ? 'home' : 'home-outline';
+
+          } else if (rn === detailsName) {
+            iconName = focused ? 'list' : 'list-outline';
+
+          } else if (rn === settingsName) {
+            iconName = focused ? 'link' : 'link-outline';
+          }
+
+          // You can return any component that you like here!
+          return <Ionicons name={iconName} size={size} color={color} />;
+        },
+        activeTintColor: 'tomato',
+            inactiveTintColor: 'grey',
+            labelStyle: { paddingBottom: 10, fontSize: 10 },
+            style: { padding: 10, height: 70}
+        })}
+      >
+        {/* <Stack.Screen name="Home" component={Home}
           options={{ 
             headerStyle: { backgroundColor: COLORS.lightWhite },
             headerShadowVisible: false,
@@ -22,8 +70,10 @@ export default function App() {
             headerRight: () => (
               <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" disabled={true} />
             )  
-          }} />
-        {/* Other screens go here */}
+          }} /> */}
+        <Stack.Screen name={homeName} component={Home} />
+        <Stack.Screen name={detailsName} component={LinksList} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

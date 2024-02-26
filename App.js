@@ -29,8 +29,8 @@ export default function App() {
   }
 
   const homeName = "Home";
-  const detailsName = "Popular";
-  const settingsName = "Settings";
+  const listsName = "List";
+  const linksName = "Links";
 
   return (
     <NavigationContainer>
@@ -44,10 +44,10 @@ export default function App() {
           if (rn === homeName) {
             iconName = focused ? 'home' : 'home-outline';
 
-          } else if (rn === detailsName) {
+          } else if (rn === listsName) {
             iconName = focused ? 'list' : 'list-outline';
 
-          } else if (rn === settingsName) {
+          } else if (rn === linksName) {
             iconName = focused ? 'link' : 'link-outline';
           }
 
@@ -72,7 +72,8 @@ export default function App() {
             )  
           }} /> */}
         <Stack.Screen name={homeName} component={Home} />
-        <Stack.Screen name={detailsName} component={LinksList} />
+        <Stack.Screen name={listsName} component={LinksList} />
+        <Stack.Screen name={linksName} component={LinksList} />
 
       </Stack.Navigator>
     </NavigationContainer>

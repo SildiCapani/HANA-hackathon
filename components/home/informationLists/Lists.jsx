@@ -8,15 +8,15 @@ import {
   FlatList
  } from 'react-native'
 
-import styles from './welcome.style';
+import styles from './Lists.style';
 import { icons, SIZES } from '../../../constants'
 
-const Welcome = () => {
+const informationList = () => {
   return (
     <View>
-      <Text style={styles.welcomeMessage}>Welcome</Text>
+      <Text>Information List</Text>
     </View>
   )
 }
 
-export default Welcome
+export default informationList

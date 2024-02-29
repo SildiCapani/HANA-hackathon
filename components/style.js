@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { COLORS, FONT, SIZES } from "../constants/theme";
 
     
     const styles = StyleSheet.create({
@@ -11,12 +12,22 @@ import { StyleSheet } from "react-native";
         },
         
         title: {
-          fontSize: 24,
-          fontWeight: 'bold',
-          marginBottom: 10,
-          textAlign: 'center',
+          fontFamily: FONT.bold,
+          fontSize: 45,
+          color: COLORS.primary,
+          marginTop: 2,
+          zIndex: 10
+        },
+
+        dot: {
+          width: 100,
+          height: 100,
+          borderRadius: 100,
+          backgroundColor: 'blue'
         },
         
+        center: { alignItems: 'center', justifyContent: 'center' },
+
         image: {
             width: "100%",
             height: 400,

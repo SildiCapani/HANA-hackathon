@@ -11,7 +11,7 @@ import {
 import styles from './Lists.style';
 import { icons, SIZES } from '../../../constants'
 
-const informationList = () => {
+const InformationList = () => {
   return (
     <View>
       <Text>Information List</Text>
@@ -19,4 +19,4 @@ const informationList = () => {
   )
 }
 
-export default informationList
+export default InformationList

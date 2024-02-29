@@ -7,7 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 import { COLORS, icons, images, SIZES } from './constants'
-import { LinksList, ScreenHeaderBtn, Welcome} from './components'
+import { LinksList, ScreenHeaderBtn, Welcome, InformationList} from './components'
 
 
 const Stack = createBottomTabNavigator();
@@ -29,7 +29,7 @@ export default function App() {
   }
 
   const homeName = "Home";
-  const listsName = "List";
+  const listsName = "Info-List";
   const linksName = "Links";
 
   return (
@@ -59,20 +59,9 @@ export default function App() {
             labelStyle: { paddingBottom: 10, fontSize: 10 },
             style: { padding: 10, height: 70}
         })}
-      >
-        {/* <Stack.Screen name="Home" component={Home}
-          options={{ 
-            headerStyle: { backgroundColor: COLORS.lightWhite },
-            headerShadowVisible: false,
-            headerLeft: () => (
-              <ScreenHeaderBtn iconUrl={icons.menu} dimension="55%" />
-            ),
-            headerRight: () => (
-              <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" disabled={true} />
-            )  
-          }} /> */}
+        >
         <Stack.Screen name={homeName} component={Home} />
-        <Stack.Screen name={listsName} component={LinksList} />
+        <Stack.Screen name={listsName} component={InformationList} />
         <Stack.Screen name={linksName} component={LinksList} />
 
       </Stack.Navigator>

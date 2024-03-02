@@ -6,8 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
-import { COLORS, icons, images, SIZES } from './constants'
-import { LinksList, ScreenHeaderBtn, Welcome, InformationList} from './components'
+import { LinksList, InformationList, InformationScreen} from './components'
 
 
 const Stack = createBottomTabNavigator();
@@ -63,8 +62,10 @@ export default function App() {
         <Stack.Screen name={homeName} component={Home} />
         <Stack.Screen name={listsName} component={InformationList} />
         <Stack.Screen name={linksName} component={LinksList} />
+        
 
       </Stack.Navigator>
+        <Stack.Screen name='InfromationScreen' component={InformationScreen} />
     </NavigationContainer>
   );
 }

@@ -15,10 +15,10 @@ export const Home = () => {
 
 
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
           <Text style={[ styles.title ]}> Corrupt Fighter </Text>
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          {/* <ImageBackground source={require('../assets/images/binary.png')} style={styles.image2}/> */}
+           {/* <ImageBackground source={require('../assets/images/logo.png')} style={styles.image}/>  */}
               
               <View style={styles.center}>
                 {[...Array(5).keys()].map((index) => {
@@ -30,7 +30,7 @@ export const Home = () => {
                         type: 'timing',
                         duration: 2000,
                         easing: Easing.out(Easing.ease),
-                        delay: index * Math.floor(200, 300),
+                        delay: index * Math.floor(300, 400),
                         loop: true
                       }}
                       key={index}

@@ -1,21 +1,28 @@
 import React from 'react'
 import { 
-  View,
   Text,
   TextInput,
   TouchableOpacity,
-  Image,
-  FlatList
- } from 'react-native'
+  FlatList,
+  ScrollView
+ } from 'react-native';
+
+import data from '../../../info-data.json'
 
 import styles from './Lists.style';
-import { icons, SIZES } from '../../../constants'
 
 const InformationList = () => {
+ 
+
   return (
-    <View>
-      <Text>Information List</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <Text style={styles.welcomeMessage}>Informacione për korrupsionin në Universitete</Text>
+        {data.map((item, index) => (
+          <TouchableOpacity key={index} style={styles.button} onClick={() => navigation.navigate('InformationScreen', { content: item.content})}>
+            <Text style={styles.buttonText}>{item.title}</Text>
+          </TouchableOpacity>
+        ))}
+    </ScrollView>
   )
 }
 

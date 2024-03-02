@@ -3,7 +3,7 @@ import ScreenHeaderBtn from "./common/header/ScreenHeaderBtn";
 // home screen
 import InformationList from "./home/informationList/Lists";
 import LinksList from "./home/nearby/LinksList";
-import Popularjobs from "./home/popular/Popularjobs";
+import InformationScreen from "./home/information/InformationScreen";
 
 
 import Company from "./linkdetails/company/Company";
@@ -19,7 +19,7 @@ export {
   ScreenHeaderBtn,
   InformationList,
   LinksList,
-  Popularjobs,
+  InformationScreen,
   Company,
   LinkTabs,
   LinkAbout,

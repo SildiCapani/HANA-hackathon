@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import TabNavigator from './TabNavigator.js';
 import { InformationScreen } from '../components/index.js';
+import { createStackNavigator } from "@react-navigation/stack";
 
 
 

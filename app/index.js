@@ -1,5 +1,4 @@
 import { Text, View, StyleSheet, ImageBackground, TouchableOpacity } from "react-native"; 
-import { Stack, useRouter } from 'expo-router'
 import styles from "../components/style";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { MotiView } from '@motify/components';
@@ -10,7 +9,6 @@ import { Easing } from 'react-native-reanimated'
 
 export const Home = () => {
 
-    const router = useRouter();
     const iconName = 'notification';
 
 

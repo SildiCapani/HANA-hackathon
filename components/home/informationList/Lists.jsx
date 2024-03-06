@@ -6,7 +6,7 @@ import {
   FlatList,
   ScrollView
  } from 'react-native';
-
+import { Link } from 'expo-router'
 import data from '../../../info-data.json'
 
 import styles from './Lists.style';
@@ -21,7 +21,7 @@ const InformationList = ({ navigation }) => {
           <TouchableOpacity 
             key={index} 
             style={styles.button} 
-            onPress={() => navigation.navigate("InfromationScreen")}
+            onPress={() => navigation.navigate("InfromationScreen", { content:  item.content  })}
             >
             <Text style={styles.buttonText}>{item.title}</Text>
           </TouchableOpacity>

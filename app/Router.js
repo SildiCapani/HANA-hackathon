@@ -13,7 +13,7 @@ const Stack = createStackNavigator();
     <NavigationContainer>
       <Stack.Navigator>
      
-        <Stack.Screen name="Home" component={TabNavigator} />
+        <Stack.Screen name="Tabs" component={TabNavigator} options={{ headerShown: false }} />
         <Stack.Screen name="InfromationScreen" component={InformationScreen} />
         
       </Stack.Navigator>

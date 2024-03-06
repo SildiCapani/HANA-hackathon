@@ -1,7 +1,7 @@
 import { useFonts } from 'expo-font';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { Home } from '.';
+import { Home } from './index';
 import { InformationList, LinksList } from '../components';
 
 
@@ -11,7 +11,7 @@ export const unstable_settings = {
   initialRouteName: "home",
 }
 
-const TabNavigator = () => {
+const TabNavigator = (props) => {
 
   const [fontsLoaded] = useFonts({
     DMBold: require("../assets/fonts/DMSans-Bold.ttf"),

@@ -3,9 +3,7 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONT, SIZES } from "../../../constants";
 
 const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-  },
+
   userName: {
     fontFamily: FONT.regular,
     fontSize: SIZES.large,
@@ -15,9 +13,10 @@ const styles = StyleSheet.create({
     fontFamily: FONT.bold,
     fontSize: SIZES.xLarge,
     color: COLORS.primary,
-    alignSelf: 'center',
-    alignItems: 'center',
-    marginTop: 2,
+    textAlign: 'center',
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 4,
   },
 
 
@@ -82,18 +81,19 @@ const styles = StyleSheet.create({
   },
   tabsContainer: {
     width: "100%",
+    padding: 7,
     marginTop: SIZES.medium,
   },
-  tab: (activeJobType, item) => ({
+  tab: (activeTabList, item) => ({
     paddingVertical: SIZES.small / 2,
     paddingHorizontal: SIZES.small,
     borderRadius: SIZES.medium,
     borderWidth: 1,
-    borderColor: activeJobType === item ? COLORS.secondary : COLORS.gray2,
+    borderColor: activeTabList === item ? COLORS.secondary : COLORS.gray2,
   }),
-  tabText: (activeJobType, item) => ({
+  tabText: (activeTabList, item) => ({
     fontFamily: FONT.medium,
-    color: activeJobType === item ? COLORS.secondary : COLORS.gray2,
+    color: activeTabList === item ? COLORS.secondary : COLORS.gray2,
   }),
 });
 

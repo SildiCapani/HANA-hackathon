@@ -2,10 +2,14 @@ import { useFonts } from 'expo-font';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Home } from './index';
-import { InformationList, LinksList } from '../components';
+import { InformationList, LinksList, ScreenHeaderBtn } from '../components';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { COLORS, icons } from "../constants";
+
 
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 export const unstable_settings = {
   initialRouteName: "home",
@@ -54,9 +58,37 @@ const TabNavigator = (props) => {
             style: { padding: 10, height: 70}
         })}
         >
-        <Tab.Screen name={homeName} component={Home} />
-        <Tab.Screen name={listsName} component={InformationList} />
-        <Tab.Screen name={linksName} component={LinksList} />
+
+        <Tab.Screen name={homeName} component={Home} options={{
+          headerStyle: { backgroundColor: COLORS.lightWhite },
+          headerShadowVisible: false,
+          headerLeft: () => (
+            <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
+          ),
+          headerRight: () => (
+            <ScreenHeaderBtn iconUrl={require('../assets/images/logo.png')} dimension="100%" disabled={true} />
+          ),
+        }} />
+        <Tab.Screen name={listsName} component={InformationList} options={{
+          headerStyle: { backgroundColor: COLORS.lightWhite },
+          headerShadowVisible: false,
+          headerLeft: () => (
+            <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
+          ),
+          headerRight: () => (
+            <ScreenHeaderBtn iconUrl={require('../assets/images/logo.png')} dimension="100%" disabled={true} />
+          ),
+        }} />
+        <Tab.Screen name={linksName} component={LinksList} options={{
+          headerStyle: { backgroundColor: COLORS.lightWhite },
+          headerShadowVisible: false,
+          headerLeft: () => (
+            <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
+          ),
+          headerRight: () => (
+            <ScreenHeaderBtn iconUrl={require('../assets/images/logo.png')} dimension="100%" disabled={true} />
+          ),
+        }} />
         
       </Tab.Navigator>
   );

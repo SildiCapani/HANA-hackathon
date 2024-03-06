@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 
 import styles from './InformationScreen.style'
 
@@ -11,6 +11,7 @@ const InformationScreen = ({ route }) => {
 
   return (
     <View>
+      
       <Text>{content}</Text>
     </View>
   )

@@ -1,15 +1,12 @@
-import { useFonts } from 'expo-font';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Home } from './index';
 import { InformationList, LinksList, ScreenHeaderBtn } from '../components';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { COLORS, icons } from "../constants";
 
 
 
 const Tab = createBottomTabNavigator();
-const Stack = createNativeStackNavigator();
 
 export const unstable_settings = {
   initialRouteName: "home",
@@ -17,15 +14,7 @@ export const unstable_settings = {
 
 const TabNavigator = (props) => {
 
-  const [fontsLoaded] = useFonts({
-    DMBold: require("../assets/fonts/DMSans-Bold.ttf"),
-    DMMedium: require("../assets/fonts/DMSans-Medium.ttf"),
-    DMRegular: require("../assets/fonts/DMSans-Regular.ttf"),
-  });
 
-  if (!fontsLoaded) {
-    return null;
-  }
 
   const homeName = "Home";
   const listsName = "Info-List";

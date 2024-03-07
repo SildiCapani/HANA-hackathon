@@ -22,11 +22,7 @@ const InformationList = ({ navigation }) => {
   const [ activeTabList, setActiveTabList] = useState('Të gjitha')
 
   const filterData = data.filter(item => {
-    if(activeTabList === 'Të gjitha'){
-      return true;
-    } else {
-      return item.type === activeTabList
-    }
+    return activeTabList === 'Të gjitha' ?  true : item.type === activeTabList
   })
 
   return (
@@ -50,7 +46,7 @@ const InformationList = ({ navigation }) => {
           <TouchableOpacity 
             key={index} 
             style={styles.button} 
-            onPress={() => navigation.navigate("InfromationScreen", { content:  item.content  })}
+            onPress={() => navigation.navigate("InfromationScreen", { content:  item.content, title: item.title  })}
             >
             <Text style={styles.buttonText}>{item.title}</Text>
           </TouchableOpacity>

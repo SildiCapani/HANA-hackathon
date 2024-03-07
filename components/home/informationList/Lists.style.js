@@ -5,7 +5,7 @@ import { COLORS, FONT, SIZES } from "../../../constants";
 const styles = StyleSheet.create({
 
   userName: {
-    fontFamily: FONT.regular,
+    fontFamily: FONT.regular, 
     fontSize: SIZES.large,
     color: COLORS.secondary,
   },

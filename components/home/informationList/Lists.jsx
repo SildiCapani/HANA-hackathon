@@ -46,12 +46,16 @@ const InformationList = ({ navigation }) => {
     <Divider style={{ marginTop: 7 }} inset={true} insetType="middle" />
         {filterData.map((item, index) => (
           <Button
-              style={styles.button}
               ViewComponent={LinearGradient}
               linearGradientProps={{
                 colors: ["#a8bced", "#1f22ff"],
                 start: { x: 0, y: 0.5 },
                 end: { x: 1, y: 0.5 },
+              }}
+              buttonStyle={{
+                borderRadius: 10,
+                marginBottom: 10,
+                margin: 19,
               }}
             key={index} 
             onPress={() => navigation.navigate("InfromationScreen", { content:  item.content, title: item.title  })}

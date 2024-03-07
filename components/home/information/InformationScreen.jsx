@@ -24,12 +24,16 @@ const InformationScreen = ({ route }) => {
     <Divider style={{ marginTop: 7 }} inset={true} insetType="middle" />
 
     <Button
-      style={styles.button}
       ViewComponent={LinearGradient}
       linearGradientProps={{
         colors: ["#a8bced", "#1f22ff"],
         start: { x: 0, y: 0.5 },
         end: { x: 1, y: 0.5 },
+      }}
+      buttonStyle={{
+        borderRadius: 7,
+        marginBottom: 25,
+        margin: 10,
       }}
     >
       <Text style={styles.buttonText}> <AntDesign name='Safety' size={22}/> Denonco</Text>

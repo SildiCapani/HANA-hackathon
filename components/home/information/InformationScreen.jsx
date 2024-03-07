@@ -1,7 +1,8 @@
 import React from 'react'
-import { Text, ScrollView, TouchableOpacity } from 'react-native'
+import { Text, ScrollView } from 'react-native'
 import { Divider, Button } from '@rneui/themed';
 import { LinearGradient } from 'expo-linear-gradient';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 import styles from './InformationScreen.style'
 
@@ -24,14 +25,14 @@ const InformationScreen = ({ route }) => {
 
     <Button
       style={styles.button}
-      ViewComponent={LinearGradient} // Don't forget this!
+      ViewComponent={LinearGradient}
       linearGradientProps={{
         colors: ["#a8bced", "#1f22ff"],
         start: { x: 0, y: 0.5 },
         end: { x: 1, y: 0.5 },
       }}
     >
-      <Text style={styles.buttonText}>Denonco</Text>
+      <Text style={styles.buttonText}> <AntDesign name='Safety' size={22}/> Denonco</Text>
     </Button>
           
     </ScrollView>

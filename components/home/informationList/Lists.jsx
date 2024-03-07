@@ -7,7 +7,8 @@ import {
   View
  } from 'react-native';
 import { Divider, Button } from '@rneui/themed';
-import data from '../../../info-data.json'
+import data from '../../../info-data.json';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import styles from './Lists.style';
 import { SIZES } from '../../../constants';
@@ -55,7 +56,7 @@ const InformationList = ({ navigation }) => {
             key={index} 
             onPress={() => navigation.navigate("InfromationScreen", { content:  item.content, title: item.title  })}
             >
-            <Text style={styles.buttonText}>{item.title}</Text>
+            <Text style={styles.buttonText}>{item.title} <FontAwesome name="arrow-circle-right" size={14}/></Text>
           </Button>
         ))}
     </ScrollView>

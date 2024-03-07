@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { 
   Text,
-  TextInput,
   TouchableOpacity,
   FlatList,
   ScrollView,
   View
  } from 'react-native';
-import { Link } from 'expo-router'
+import { Divider, Button } from '@rneui/themed';
 import data from '../../../info-data.json'
 
 import styles from './Lists.style';
 import { SIZES } from '../../../constants';
+import { LinearGradient } from 'expo-linear-gradient';
 
 
 const tabsList = ['Të gjitha','Korrupsioni në Universitetet', 'Raportimi i Rasteve', 'Kundër Korrupsionit']
@@ -42,14 +42,21 @@ const InformationList = ({ navigation }) => {
         />
       </View>
     <ScrollView>
+    <Divider style={{ marginTop: 7 }} inset={true} insetType="middle" />
         {filterData.map((item, index) => (
-          <TouchableOpacity 
+          <Button
+              style={styles.button}
+              ViewComponent={LinearGradient}
+              linearGradientProps={{
+                colors: ["#a8bced", "#1f22ff"],
+                start: { x: 0, y: 0.5 },
+                end: { x: 1, y: 0.5 },
+              }}
             key={index} 
-            style={styles.button} 
             onPress={() => navigation.navigate("InfromationScreen", { content:  item.content, title: item.title  })}
             >
             <Text style={styles.buttonText}>{item.title}</Text>
-          </TouchableOpacity>
+          </Button>
         ))}
     </ScrollView>
     </View>

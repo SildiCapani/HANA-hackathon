@@ -28,19 +28,16 @@ const styles = StyleSheet.create({
 
   button: {
     marginBottom: 10,
-    padding: 17,
     margin: 19,
     backgroundColor: 'rgb(101,65,242)', // Example color for button background
     borderRadius: 5,
   },
   buttonText: {
     color: 'white', // Example color for button text
-    fontSize: 16,
+    fontSize: SIZES.medium,
+    padding: 17,
     fontWeight: 'bold',
   },
-
-
-
 
 
 

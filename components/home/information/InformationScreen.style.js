@@ -6,13 +6,8 @@ const styles = StyleSheet.create({
   container: {
     overflow: 'hidden',
   },
-  header: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
   text: {
-    fontSize: 14,
+    fontSize: SIZES.medium,
     marginTop: 10,
     margin: 4,
     textAlign: 'center',
@@ -20,19 +15,24 @@ const styles = StyleSheet.create({
   }, 
   headerTitle: {
     fontFamily: FONT.bold,
-    fontSize: SIZES.xLarge,
+    fontSize: SIZES.xxLarge,
     textAlign: 'center',
     marginLeft: 10,
     marginRight: 10,
     marginTop: 10,
   },
-  headerBtn: {
-    fontSize: SIZES.medium,
-    fontFamily: FONT.medium,
-    color: COLORS.gray,
+  button: {
+    marginBottom: 25,
+    margin: 10,
+    backgroundColor: 'rgb(101,65,242)', 
+    borderRadius: 5,
   },
-  cardsContainer: {
-    marginTop: SIZES.medium,
+  buttonText: {
+    color: 'white', 
+    padding: 14,
+    fontSize: SIZES.large,
+    textAlign: 'center',
+    fontFamily: FONT.bold
   },
 });
 

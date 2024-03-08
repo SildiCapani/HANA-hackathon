@@ -1,4 +1,16 @@
-[
+{
+  "links": [
+    {
+      "title": "PDF 1",
+      "link": "https://library.fes.de/pdf-files/bueros/albanien/14942.pdf"
+    },
+    {
+      "title": "PDF 2",
+      "link": "https://www.mjaft.org/sites/default/files/Studimi%20mbi%20Korrupsionin%20ne%20Universitete.pdf"
+    }
+  ],
+  
+  "information": [
     {
       "title": "Korrupsioni në Universitetet",
       "type": "Korrupsioni në Universitetet",
@@ -80,4 +92,4 @@
       ]
     }
   ]
-  
+} 

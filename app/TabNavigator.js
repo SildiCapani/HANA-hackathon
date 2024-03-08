@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Home } from './index';
-import { InformationList, LinksList, ScreenHeaderBtn } from '../components';
+import { InformationList, LinksList, ScreenHeaderBtn, WebLinks } from '../components';
 import { COLORS, icons } from "../constants";
 
 
@@ -19,6 +19,7 @@ const TabNavigator = (props) => {
   const homeName = "Home";
   const listsName = "Info-List";
   const linksName = "Links";
+  const webLinks = "Web-PDF's"
 
   return (
       <Tab.Navigator
@@ -36,6 +37,8 @@ const TabNavigator = (props) => {
 
           } else if (rn === linksName) {
             iconName = focused ? 'link' : 'link-outline';
+          } else if (rn === webLinks) {
+            iconName = focused ? 'document-text' : 'document-text-outline'
           }
 
           // You can return any component that you like here!
@@ -58,6 +61,7 @@ const TabNavigator = (props) => {
             <ScreenHeaderBtn iconUrl={require('../assets/images/logo.png')} dimension="100%" disabled={true} />
           ),
         }} />
+
         <Tab.Screen name={listsName} component={InformationList} options={{
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
@@ -68,6 +72,18 @@ const TabNavigator = (props) => {
             <ScreenHeaderBtn iconUrl={require('../assets/images/logo.png')} dimension="100%" disabled={true} />
           ),
         }} />
+
+        <Tab.Screen name={webLinks} component={WebLinks} options={{
+          headerStyle: { backgroundColor: COLORS.lightWhite },
+          headerShadowVisible: false,
+          headerLeft: () => (
+            <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
+          ),
+          headerRight: () => (
+            <ScreenHeaderBtn iconUrl={require('../assets/images/logo.png')} dimension="100%" disabled={true} />
+          ),
+        }} />
+
         <Tab.Screen name={linksName} component={LinksList} options={{
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,

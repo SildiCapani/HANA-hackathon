@@ -4,7 +4,7 @@ import {
   TouchableOpacity,
   FlatList,
   ScrollView,
-  View
+  View,
  } from 'react-native';
 import { Divider, Button } from '@rneui/themed';
 import data from '../../../info-data.json';
@@ -20,9 +20,9 @@ const tabsList = ['Të gjitha','Korrupsioni në Universitetet', 'Raportimi i Ras
 
 const InformationList = ({ navigation }) => {
 
-  const [ activeTabList, setActiveTabList] = useState('Të gjitha')
+  const [ activeTabList, setActiveTabList] = useState('Të gjitha');
 
-  const filterData = data.filter(item => {
+  const filterData = data.information.filter(item => {
     return activeTabList === 'Të gjitha' ?  true : item.type === activeTabList
   })
 
@@ -43,6 +43,7 @@ const InformationList = ({ navigation }) => {
         />
       </View>
     <ScrollView>
+
     <Divider style={{ marginTop: 7 }} inset={true} insetType="middle" />
         {filterData.map((item, index) => (
           <Button
@@ -53,7 +54,7 @@ const InformationList = ({ navigation }) => {
                 end: { x: 1, y: 0.5 },
               }}
               buttonStyle={{
-                borderRadius: 10,
+                borderRadius: 15,
                 marginBottom: 10,
                 margin: 19,
               }}

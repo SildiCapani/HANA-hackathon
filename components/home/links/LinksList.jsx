@@ -27,7 +27,7 @@ const LinksList = () => {
                 borderRadius: 10,
                 marginBottom: 10,
                 margin: 19,
-                marginTop: 37
+                marginTop: "10%"
               }}
             onPress={() => Linking.openURL(item.link)}
             >

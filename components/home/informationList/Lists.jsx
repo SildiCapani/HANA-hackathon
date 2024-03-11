@@ -46,6 +46,7 @@ const InformationList = ({ navigation }) => {
 
     <Divider style={{ marginTop: 7 }} inset={true} insetType="middle" />
         {filterData.map((item, index) => (
+          <View key={index}>
           <Button
               ViewComponent={LinearGradient}
               linearGradientProps={{
@@ -57,12 +58,13 @@ const InformationList = ({ navigation }) => {
                 borderRadius: 15,
                 marginBottom: 10,
                 margin: 19,
-              }}
-            key={index} 
+              }} 
             onPress={() => navigation.navigate("InfromationScreen", { content:  item.content, title: item.title  })}
             >
             <Text style={styles.buttonText}>{item.title} <FontAwesome name="arrow-circle-right" size={14}/></Text>
           </Button>
+              <Divider style={{ marginTop: 5 }} inset={true} insetType="middle" />
+          </View>
         ))}
     </ScrollView>
     </View>

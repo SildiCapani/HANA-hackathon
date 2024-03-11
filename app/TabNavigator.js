@@ -54,9 +54,9 @@ const TabNavigator = (props) => {
         <Tab.Screen name={homeName} component={Home} options={{
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
-          headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
-          ),
+          // headerLeft: () => (
+          //   <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
+          // ),
           headerRight: () => (
             <ScreenHeaderBtn iconUrl={require('../assets/images/logo.png')} dimension="100%" disabled={true} />
           ),
@@ -65,9 +65,9 @@ const TabNavigator = (props) => {
         <Tab.Screen name={listsName} component={InformationList} options={{
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
-          headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
-          ),
+          // headerLeft: () => (
+          //   <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
+          // ),
           headerRight: () => (
             <ScreenHeaderBtn iconUrl={require('../assets/images/logo.png')} dimension="100%" disabled={true} />
           ),
@@ -76,9 +76,9 @@ const TabNavigator = (props) => {
         <Tab.Screen name={webLinks} component={WebLinks} options={{
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
-          headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
-          ),
+          // headerLeft: () => (
+          //   <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
+          // ),
           headerRight: () => (
             <ScreenHeaderBtn iconUrl={require('../assets/images/logo.png')} dimension="100%" disabled={true} />
           ),
@@ -87,9 +87,9 @@ const TabNavigator = (props) => {
         <Tab.Screen name={linksName} component={LinksList} options={{
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
-          headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
-          ),
+          // headerLeft: () => (
+          //   <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
+          // ),
           headerRight: () => (
             <ScreenHeaderBtn iconUrl={require('../assets/images/logo.png')} dimension="100%" disabled={true} />
           ),

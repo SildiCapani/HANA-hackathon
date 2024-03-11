@@ -25,7 +25,7 @@ const WebLinks = () => {
                 <Button
                 ViewComponent={LinearGradient}
                 linearGradientProps={{
-                    colors: ["#a8bced", "#1f22ff"],
+                    colors: ["#11f75a", "#1f22ff"],
                     start: { x: 0, y: 0.5 },
                     end: { x: 1, y: 0.5 },
                 }}

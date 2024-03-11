@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.large,
     color: COLORS.gray,
     textAlign: 'center',
-    marginTop: 37
+    marginTop: "10%"
   }
 
 });

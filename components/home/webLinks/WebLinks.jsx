@@ -19,8 +19,9 @@ const WebLinks = () => {
             <Divider style={{ marginTop: 7 }} />
             <ScrollView>
 
-             {data.links.map((item, index) => (
-                <View>
+             {data.pdfLinks.map((item, index) => (
+                <View key={index}>
+                    <Text style={styles.itemTitle}>{item.autor}</Text>
                 <Button
                 ViewComponent={LinearGradient}
                 linearGradientProps={{
@@ -33,10 +34,10 @@ const WebLinks = () => {
                     marginBottom: 15,
                     margin: 19,
                 }}
-                    key={index} 
+                     
                     onPress={() => Linking.openURL(item.link)}
                 >
-                    <Text style={styles.buttonText}>{item.title} <AntDesign name="pdffile1" size={20}/></Text>
+                    <Text style={styles.buttonText}> PDF {index+1} <AntDesign name="pdffile1" size={20}/></Text>
                 </Button>
                 <Divider style={{ marginTop: 5 }} inset={true} insetType="middle" />
                 </View>

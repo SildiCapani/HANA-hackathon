@@ -1,17 +1,39 @@
 {
-  "links": [
+  "reportingLinks": [
     {
-      "title": "PDF 1",
+      "title": "spak.gov.al",
+      "link": "https://spak.gov.al/denonco-2/"
+    },
+    {
+      "title": "amp.gov.al",
+      "link": "https://amp.gov.al/udhezim-per-ankesat/"
+    },
+    {
+      "title": "tirana.al",
+      "link": "https://tirana.al/kontakt"
+    },
+    {
+      "title": "shqiperiaqeduam.al",
+      "link": "https://www.shqiperiaqeduam.al/denoncoKorrupsionin"
+    }
+  ],
+  
+  "pdfLinks": [
+    {
+      "id": 0,
+      "autor": "QËNDRESA QYTETARE, FRIEDRICH EBERT STIFTUNG",
       "link": "https://library.fes.de/pdf-files/bueros/albanien/14942.pdf"
     },
     {
-      "title": "PDF 2",
+      "id": 1,
+      "autor": "AMBASADA SH.B.A TIRANË",
       "link": "https://www.mjaft.org/sites/default/files/Studimi%20mbi%20Korrupsionin%20ne%20Universitete.pdf"
     }
   ],
   
   "information": [
     {
+      "id": 1,
       "title": "Korrupsioni në Universitetet",
       "type": "Korrupsioni në Universitetet",
       "content": [

@@ -25,6 +25,14 @@ const styles = StyleSheet.create({
     fontFamily: FONT.bold
   },
 
+  itemTitle: {
+    fontFamily: FONT.medium,
+    fontSize: SIZES.large,
+    color: COLORS.gray,
+    textAlign: 'center',
+    marginTop: 37
+  }
+
 });
 
 export default styles;

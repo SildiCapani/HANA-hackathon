@@ -41,10 +41,8 @@ const TabNavigator = (props) => {
 
           if (rn === homeName) {
             iconName = focused ? 'home' : 'home-outline';
-
           } else if (rn === listsName) {
             iconName = focused ? 'list' : 'list-outline';
-
           } else if (rn === linksName) {
             iconName = focused ? 'link' : 'link-outline';
           } else if (rn === webLinks) {

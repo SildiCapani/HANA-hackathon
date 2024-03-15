@@ -15,7 +15,7 @@ const WebLinks = () => {
     return (
         <View style={styles.background}>
 
-            <Text style={styles.welcomeMessage}> Pëerceptimi i Korrupsionit në Shqipëri </Text>
+            <Text style={styles.welcomeMessage}> Përceptimi i Korrupsionit në Shqipëri </Text>
             <Divider style={{ marginTop: 7 }} />
             <ScrollView>
 

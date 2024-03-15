@@ -10,11 +10,18 @@ const styles = StyleSheet.create({
   welcomeMessage: {
     fontFamily: FONT.bold,
     fontSize: SIZES.xLarge,
-    color: COLORS.primary,
+    color: COLORS.lightWhite,
     textAlign: 'center',
     marginLeft: 10,
     marginRight: 10,
     marginTop: 4,
+  },
+
+  background: {
+    height: "100%",
+    width: "100%",
+    backgroundColor: '#4e3efa',
+    resizeMode: 'cover'
   },
 
   buttonText: {

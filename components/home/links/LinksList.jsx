@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Linking } from 'react-native';
+import { View, Text, Linking} from 'react-native';
 import { Divider, Button } from '@rneui/themed';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import data from '../../../info-data.json'
@@ -11,8 +11,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 const LinksList = () => {
   return (
-    <View>
-      <Text style={styles.welcomeMessage}>Linke për denoncimin e rasteve të korrupsionit</Text>
+    <View style={styles.background} >
+      <Text style={styles.welcomeMessage}>Mundësi denoncimi</Text>
       <Divider style={{ marginTop: 5 }} />
       {data.reportingLinks.map((item, index) => (
         <View key={index}>

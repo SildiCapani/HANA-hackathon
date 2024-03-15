@@ -1,6 +1,6 @@
-import { Text, View, StyleSheet, TouchableOpacity, Linking } from "react-native"; 
+import { Text, View, StyleSheet, TouchableOpacity, Linking, ScrollView, Image, ImageBackground } from "react-native"; 
 import styles from "../components/style";
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { MotiView } from '@motify/components';
 import { Easing } from 'react-native-reanimated'
 
@@ -11,10 +11,11 @@ export const Home = () => {
 
 
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <ImageBackground style={styles.image} source={require('../assets/images/bkimg.jpg')}>   
+          <View style={[styles.container]}>
           <Text style={[ styles.title ]}> Corrupt Fighter </Text>
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-           {/* <ImageBackground source={require('../assets/images/logo.png')} style={styles.image}/>  */}
+          
+        <View style={styles.container2}>
               
               <View style={styles.center}>
                 {[...Array(5).keys()].map((index) => {
@@ -30,16 +31,18 @@ export const Home = () => {
                         loop: true
                       }}
                       key={index}
-                      style={[StyleSheet.absoluteFillObject, styles.dot]}
+                      style={[StyleSheet.absoluteFillObject, styles.dot ]}
                     />
                   );
                 })}
                 
                 <TouchableOpacity style={[styles.dot , styles.center ]} onPress={() => Linking.openURL('https://spak.gov.al/denonco-2/')} >
-                  <Ionicons name="megaphone-outline" size={40} color='#f0f0f0' />
+                  <FontAwesome name='hand-stop-o' size={40} color='#f0f0f0' />
                 </TouchableOpacity>
               </View>
+
           </View>
-        </View>
+          </View>
+        </ImageBackground>
       );
     };

@@ -5,6 +5,7 @@ import {
   FlatList,
   ScrollView,
   View,
+  ImageBackground,
  } from 'react-native';
 import { Divider, Button } from '@rneui/themed';
 import data from '../../../info-data.json';
@@ -27,8 +28,8 @@ const InformationList = ({ navigation }) => {
   })
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.welcomeMessage}>Informacione për korrupsionin në Universitete</Text>
+    <ImageBackground source={require('../../../assets/images/bkimg2.jpg')} style={styles.container}>
+      <Text style={styles.welcomeMessage}>Korrupsioni në Universitete</Text>
       
       <View style={styles.tabsContainer}>
         <FlatList data={tabsList} renderItem={({ item }) => (
@@ -67,7 +68,7 @@ const InformationList = ({ navigation }) => {
           </View>
         ))}
     </ScrollView>
-    </View>
+    </ImageBackground>
   )
 }
 

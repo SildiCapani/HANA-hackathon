@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   welcomeMessage: {
     fontFamily: FONT.bold,
     fontSize: SIZES.xLarge,
-    color: COLORS.primary,
+    color: COLORS.lightWhite,
     textAlign: 'center',
     marginLeft: 10,
     marginRight: 10,

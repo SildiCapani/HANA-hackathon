@@ -13,9 +13,9 @@ import { ScrollView } from "react-native-gesture-handler";
 const WebLinks = () => {
 
     return (
-        <View>
+        <View style={styles.background}>
 
-            <Text style={styles.welcomeMessage}> Informacione në Internet </Text>
+            <Text style={styles.welcomeMessage}> Pëerceptimi i Korrupsionit në Shqipëri </Text>
             <Divider style={{ marginTop: 7 }} />
             <ScrollView>
 

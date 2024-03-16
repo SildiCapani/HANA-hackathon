@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   },
 
   background: {
-    height: "70%",
+    height: "75%",
     width: "100%",
     backgroundColor: '#122337',
     resizeMode: 'cover'

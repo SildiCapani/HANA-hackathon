@@ -1,8 +1,10 @@
-import { Text, View, StyleSheet, TouchableOpacity, Linking, ScrollView, Image, ImageBackground } from "react-native"; 
+import { Text, View, StyleSheet, TouchableOpacity, Linking, ImageBackground } from "react-native"; 
 import styles from "../components/style";
+import { Button } from '@rneui/themed';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { MotiView } from '@motify/components';
 import { Easing } from 'react-native-reanimated'
+import { LinearGradient } from "expo-linear-gradient";
 
 
 
@@ -42,6 +44,23 @@ export const Home = () => {
               </View>
 
           </View>
+          <Button
+                ViewComponent={LinearGradient}
+                linearGradientProps={{
+                    colors: ["#11f75a", "#1f22ff"],
+                    start: { x: 0, y: 0.5 },
+                    end: { x: 1, y: 0.5 },
+                }}
+                buttonStyle={{
+                    borderRadius: 15,
+                    marginBottom: 15,
+                    margin: 19,
+                }}
+                     
+                    onPress={() => {}}
+                >
+                    <Text style={styles.buttonText}> PDF </Text>
+                </Button>
           </View>
         </ImageBackground>
       );

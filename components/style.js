@@ -36,20 +36,16 @@ import { COLORS, FONT, SIZES } from "../constants/theme";
           backgroundColor: 'blue',
         },
 
-        text1: {
-          fontFamily: FONT.medium,
+        buttonText: {
+          color: 'white', 
+          padding: 14,
+          paddingLeft: 27,
+          paddingRight: 27,
           fontSize: SIZES.large,
-          color: 'red',
-          marginBottom: 10
+          textAlign: 'center',
+          fontFamily: FONT.bold
         },
-
-        text2: {
-          fontFamily: FONT.medium,
-          fontSize: SIZES.large,
-          color: 'green',
-          marginBottom: 10,
-          textAlign: 'right'
-        },
+      
         
         center: { alignItems: 'center', justifyContent: 'center' },
 
@@ -57,13 +53,6 @@ import { COLORS, FONT, SIZES } from "../constants/theme";
             width: "100%",
             height: "100%",
             resizeMode: 'cover',
-          },
-
-          image2: {
-            width: "100%",
-            height: "100%",
-            resizeMode: 'cover',
-            justifyContent: 'center',
           },
 
       });

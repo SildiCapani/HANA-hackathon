@@ -25,7 +25,10 @@ const Stack = createStackNavigator();
       <Stack.Navigator>
      
         <Stack.Screen name="Tabs" component={TabNavigator} options={{ headerShown: false }} />
-        <Stack.Screen name="InfromationScreen" component={InformationScreen} />
+        <Stack.Group screenOptions={{ presentation: 'modal' }}>
+          <Stack.Screen name="InfromationScreen" component={InformationScreen} />
+        </Stack.Group>
+        
         
       </Stack.Navigator>
         

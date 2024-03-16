@@ -41,7 +41,7 @@ import { COLORS, FONT, SIZES } from "../constants/theme";
           padding: 14,
           paddingLeft: 27,
           paddingRight: 27,
-          fontSize: SIZES.large,
+          fontSize: SIZES.xxLarge,
           textAlign: 'center',
           fontFamily: FONT.bold
         },

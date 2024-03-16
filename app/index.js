@@ -1,3 +1,4 @@
+import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity, Linking, ImageBackground } from "react-native"; 
 import styles from "../components/style";
 import { Button } from '@rneui/themed';
@@ -7,10 +8,7 @@ import { Easing } from 'react-native-reanimated'
 import { LinearGradient } from "expo-linear-gradient";
 
 
-
-
-export const Home = () => {
-
+export const Home = ({ navigation }) => {
 
     return (
       <ImageBackground style={styles.image} source={require('../assets/images/bkimg.jpg')}>   
@@ -24,7 +22,7 @@ export const Home = () => {
                   return (
                     <MotiView 
                       from={{ opacity: 0.71, scale: 1 }}
-                      animate={{ opacity: 0, scale: 7 }}
+                      animate={{ opacity: 0, scale: 5 }}
                       transition={{
                         type: 'timing',
                         duration: 2000,
@@ -47,7 +45,7 @@ export const Home = () => {
           <Button
                 ViewComponent={LinearGradient}
                 linearGradientProps={{
-                    colors: ["#11f75a", "#1f22ff"],
+                    colors: ["#ac4ab5", "#473d47"],
                     start: { x: 0, y: 0.5 },
                     end: { x: 1, y: 0.5 },
                 }}
@@ -59,7 +57,7 @@ export const Home = () => {
                      
                     onPress={() => {}}
                 >
-                    <Text style={styles.buttonText}> PDF </Text>
+                    <FontAwesome name="mail-forward" style={styles.buttonText} />
                 </Button>
           </View>
         </ImageBackground>

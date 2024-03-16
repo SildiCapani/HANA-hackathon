@@ -22,7 +22,7 @@ function LogoTitle() {
   );
 }
 
-const TabNavigator = (props) => {
+const TabNavigator = ({ navigation }) => {
 
 
 

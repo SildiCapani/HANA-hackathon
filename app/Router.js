@@ -6,12 +6,7 @@ import { useFonts } from 'expo-font';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 
-const DrawerNav = createDrawerNavigator({
-  DashboardStack: Dashboard, 
-},
-{
-  drawerPosition: 'right'
-});
+const DrawerNav = createDrawerNavigator();
 const Stack = createStackNavigator();
 
 
@@ -38,7 +33,7 @@ const Stack = createStackNavigator();
           <Stack.Screen name="InfromationScreen" component={InformationScreen} />
         </Stack.Group>
         
-        <DrawerNav.Screen name="RightDrawer" component={InformationScreen} />
+        <DrawerNav.Screen name="RightDrawer" component={Drawer} />
         
       </Stack.Navigator>
     </NavigationContainer>

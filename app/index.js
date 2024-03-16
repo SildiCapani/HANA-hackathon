@@ -10,6 +10,7 @@ import { LinearGradient } from "expo-linear-gradient";
 
 export const Home = ({ navigation }) => {
 
+
     return (
       <ImageBackground style={styles.image} source={require('../assets/images/bkimg.jpg')}>   
           <View style={[styles.container]}>
@@ -55,7 +56,7 @@ export const Home = ({ navigation }) => {
                     margin: 19,
                 }}
                      
-                    onPress={() => {}}
+                    onPress={() => navigation.navigate("RightDrawer")}
                 >
                     <FontAwesome name="mail-forward" style={styles.buttonText} />
                 </Button>

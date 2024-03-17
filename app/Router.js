@@ -33,7 +33,7 @@ const Stack = createStackNavigator();
           <Stack.Screen name="InfromationScreen" component={InformationScreen} />
         </Stack.Group>
         
-        <DrawerNav.Screen name="RightDrawer" component={Drawer} />
+        {/* <DrawerNav.Screen name="RightDrawer" component={Drawer} /> */}
         
       </Stack.Navigator>
     </NavigationContainer>

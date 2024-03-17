@@ -4,7 +4,7 @@
     "slug": "hackathon",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/logo.png",
+    "icon": "./assets/images/square_icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/images/logo.png",
@@ -15,16 +15,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sildi.hackathon"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/logo.png",
+        "foregroundImage": "./assets/images/square_icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.sildi.hackathon"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "820d8100-f5b1-439d-b31f-416faef96b0a"
+      }
+    },
+    "owner": "sildi"
   }
 }

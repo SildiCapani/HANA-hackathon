@@ -71,27 +71,21 @@ const TabNavigator = ({ navigation }) => {
           headerStyle: { backgroundColor: "#c12f3c" }, headerTintColor: '#fff',
           headerShadowVisible: false,
           headerTitle: (props) => <LogoTitle {...props} />,
-          headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
-          ),
+          // headerLeft: () => (
+          //   <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
+          // ),
         }} />
 
         <Tab.Screen name={webLinks} component={WebLinks} options={{
           headerStyle: { backgroundColor: '#122337' }, headerTintColor: '#fff',
           headerShadowVisible: false,
           headerTitle: (props) => <LogoTitle {...props} />,
-          headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
-          ),
         }} />
 
         <Tab.Screen name={linksName} component={LinksList} options={{
           headerStyle: { backgroundColor: '#4e3efa' },
           headerShadowVisible: false,
           headerTitle: (props) => <LogoTitle {...props} />,
-          headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
-          ),
         }} />
         
       </Tab.Navigator>

@@ -43,7 +43,7 @@ export const Home = ({ navigation }) => {
               </View>
 
           </View>
-          <Button
+          {/* <Button
                 ViewComponent={LinearGradient}
                 linearGradientProps={{
                     colors: ["#ac4ab5", "#473d47"],
@@ -59,7 +59,7 @@ export const Home = ({ navigation }) => {
                     onPress={() => navigation.navigate("RightDrawer")}
                 >
                     <FontAwesome name="mail-forward" style={styles.buttonText} />
-                </Button>
+                </Button> */}
           </View>
         </ImageBackground>
       );
